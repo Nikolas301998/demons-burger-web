@@ -1,18 +1,18 @@
 // --- IMAGENES REALES DE SUPABASE ---
-const IMG_BIG_MOM = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/BIG%20MOM%20PAPAS.jpg";
-const IMG_CLASICA_PREMIUM= "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/CLASICA%20PREMIUM%20PAPAS.jpg";
-const IMG_DOBLE_CHEESE = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/DOBLE%20CHESEE.jpg";
-const IMG_GREEN = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/GREEN%20BURGER.jpg";
-const IMG_SRIRACHA = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/SIRACHA%20HELL%20(PICANTE)%20.jpg";
-const IMG_DUO = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/DUO%20PERFECTO.jpg";
-const IMG_DUO2 = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/DUO%20O%20TRIO.jpg";
-const IMG_TRIO = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/TRIO.jpg";
-const IMG_CLASICA= "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/CLASICA%20PAPAS.jpg";
-const IMG_SINGLE = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/SINGLE%20CHEESE%20.jpg";
-const IMG_PAPAS = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/papas-fritas-saludables-1080x550-1-1200x900.jpg";
-const IMG_LATA = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/LATAS.jpeg";
-const IMG_MOLLIE = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/MOLLIE.jpg";
-const IMG_BABY = "https://xdkqkatsrvlglxehqnvo.supabase.co/storage/v1/object/public/GIB%20MOM/BABY.jpg";
+const IMG_BIG_MOM = "/images/products/big-mom-papas.jpg";
+const IMG_CLASICA_PREMIUM= "/images/products/clasica-premium.jpg";
+const IMG_DOBLE_CHEESE = "/images/products/doble-chesee.jpg";
+const IMG_GREEN = "/images/products/green.jpg";
+const IMG_SRIRACHA = "/images/products/picante.jpg";
+const IMG_DUO = "/images/products/duo.jpg";
+const IMG_DUO2 = "/images/products/duo-perfecto.jpg";
+const IMG_TRIO = "/images/products/tri.jpg";
+const IMG_CLASICA= "/images/products/clasica-papas.jpg";
+const IMG_SINGLE = "/images/products/chese-simple.jpg";
+const IMG_PAPAS = "/images/products/papas-fritas.jpg";
+const IMG_LATA = "/images/products/lata.jpeg";
+const IMG_MOLLIE = "/images/products/molie.jpg";
+const IMG_BABY = "/images/products/babyy.jpg";
 
 export const NAV_ITEMS = [
   { label: 'Inicio', href: '#' },
