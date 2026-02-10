@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEMON'S BURGER | El Pacto Está Sellado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;600;800&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #000000;
+        color: #ffffff;
+      }
+      
+      h1, h2, h3 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .neon-border {
+        box-shadow: 0 0 0px #ff0000;
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .neon-border:hover {
+        box-shadow: 0 0 15px #ff0000;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ff0000;
+      }
+      /* --- PEGAR ESTO DENTRO DE LA ETIQUETA <style> EN index.html --- */
+
+/* Variables para los colores del botón */
+:root {
+  /* Cambia #000000 por otro color si quieres el fondo del botón distinto */
+  /* Ejemplo: Un gris muy oscuro casi negro */
+  --color-background: #0a0a0a; 
+  --color-text: #ffffff;
+}
+
+/* Definición de la propiedad para la animación (necesario para que gire) */
+@property --r {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* La animación de giro */
+@keyframes rotate {
+  from { --r: 0deg; }
+  to { --r: 360deg; }
+}
+
+/* La clase mágica que aplicaremos al botón */
+.rotatingGradient {
+  /* Borde de fuego: Rojo -> Naranja -> Negro -> Rojo */
+  background: conic-gradient(from var(--r), #ff0000 0%, #ff4d00 10%, #202020 30%, #202020 70%, #ff4d00 90%, #ff0000 100%);
+  animation: rotate 4s linear infinite;
+}
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.26.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
