@@ -10,17 +10,18 @@ export const ValentineModal = () => {
     }, []);
 
     const getWhatsAppLink = () => {
-        const base = "https://wa.me/56952167890?text=";
-        const fire = "%F0%9F%94%A5"; 
-        const heart = "%E2%9D%A4%EF%B8%8F"; 
-        const rock = "%F0%9F%A4%98"; 
-
+        const base = "https://wa.me/56952167890?text="; 
+        
         let mensaje = "";
+        
         if (selected === 'infernal') {
-            mensaje = `Hola Demons Burger! ${fire} Quiero pedir la promo AMOR INFERNAL de $21.990 ${heart}`;
+            mensaje = "Hola Demons Burger! 🔥 Quiero pedir la promo AMOR INFERNAL de $21.990 ❤️";
         } else if (selected === 'anticupido') {
-            mensaje = `Hola Demons Burger! ${fire} Quiero pedir la promo ANTI-CUPIDO (3x2) de $16.990 ${rock}`;
+            mensaje = "Hola Demons Burger! 🔥 Quiero pedir la promo ANTI-CUPIDO (3x2) de $16.990 🤘";
         }
+        
+        // encodeURIComponent se encarga de que internet entienda el mensaje
+        // pero WhatsApp lo mostrará limpio al cliente.
         return base + encodeURIComponent(mensaje);
     };
 
@@ -72,7 +73,7 @@ export const ValentineModal = () => {
                             </div>
                         </div>
 
-                        {/* PROMO 2: ANTI-CUPIDO (CORREGIDA) */}
+                        {/* PROMO 2: ANTI-CUPIDO */}
                         <div 
                             onClick={() => setSelected('anticupido')}
                             className={`relative p-5 rounded-2xl border-2 transition-all cursor-pointer ${
@@ -83,7 +84,7 @@ export const ValentineModal = () => {
                         >
                             <div className="flex justify-between items-center">
                                 <div className="flex-1">
-                                    <h3 className="text-xl font-black text-white italic">ANTI-CUPIDO 🔥</h3>
+                                    <h3 className="text-xl font-black text-white italic">ANTI-CUPIDO 🤘</h3>
                                     <p className="text-slate-400 text-[11px] mt-1 uppercase tracking-wider font-bold">
                                         3 Hamburguesas Clasicas (Pagan 2, comen 3)
                                     </p>
