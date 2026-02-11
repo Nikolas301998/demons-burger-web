@@ -7,7 +7,6 @@ import { ValentineModal } from './components/ValentineModal';
 import { FloatingCart } from './components/FloatingCart';
 
 function App() {
-  // Estado del carrito: guarda el ID del producto y su cantidad
   const [cart, setCart] = useState<{ [key: string]: number }>({});
 
   const addToCart = (id: string) => {
@@ -17,11 +16,8 @@ function App() {
   const removeFromCart = (id: string) => {
     setCart(prev => {
       const newCart = { ...prev };
-      if (newCart[id] > 1) {
-        newCart[id] -= 1;
-      } else {
-        delete newCart[id];
-      }
+      if (newCart[id] > 1) newCart[id] -= 1;
+      else delete newCart[id];
       return newCart;
     });
   };
@@ -31,11 +27,7 @@ function App() {
       <ValentineModal /> 
       <Navbar />
       <Hero />
-      <Menu 
-        cart={cart} 
-        addToCart={addToCart} 
-        removeFromCart={removeFromCart} 
-      />
+      <Menu cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Footer /> 
       <FloatingCart cart={cart} />
     </div>
