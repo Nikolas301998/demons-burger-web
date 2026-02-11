@@ -15,35 +15,57 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index, quantity, onA
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="bg-zinc-900/50 border border-white/10 rounded-3xl overflow-hidden hover:border-red-600/50 transition-all group flex flex-col h-full"
+      className="bg-[#0a0a0a] border border-white/5 rounded-[2rem] overflow-hidden hover:border-red-600/30 transition-all group flex flex-col h-full"
     >
-      <div className="relative aspect-video overflow-hidden">
+      {/* Contenedor de Imagen con Estilo Premium */}
+      <div className="relative aspect-[4/5] overflow-hidden">
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
-        <div className="absolute top-4 right-4 bg-black/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-red-600/50 shadow-xl">
-          <span className="text-red-500 font-black text-lg">${product.price.toLocaleString()}</span>
+        
+        {/* Cartel Dorado Arriba (Solo si es destacado) */}
+        <div className="absolute top-4 left-4">
+          <span className="bg-[#f2bc1b] text-black text-[10px] font-black px-3 py-1.5 rounded-lg uppercase tracking-tighter shadow-lg">
+            Mejor Valorado
+          </span>
+        </div>
+
+        {/* Bloque de Precio Abajo a la Izquierda (Estilo Foto) */}
+        <div className="absolute bottom-4 left-4 bg-black/60 backdrop-blur-xl p-3 rounded-2xl border border-white/10 shadow-2xl">
+          <div className="flex flex-col">
+            <span className="text-red-500 text-[10px] font-bold leading-none mb-1">
+              Antes: ${(product.price * 1.2).toLocaleString()}
+            </span>
+            <span className="text-white text-2xl font-black leading-none tracking-tighter">
+              ${product.price.toLocaleString()}
+            </span>
+          </div>
         </div>
       </div>
 
+      {/* Textos y Botón */}
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-black text-white mb-2 italic uppercase tracking-tighter">{product.name}</h3>
-        <p className="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed flex-grow">{product.description}</p>
+        <h3 className="text-xl font-black text-white mb-2 italic uppercase tracking-tighter">
+          {product.name}
+        </h3>
+        <p className="text-gray-500 text-xs mb-6 leading-relaxed line-clamp-2 flex-grow font-medium">
+          {product.description}
+        </p>
 
         <div className="mt-auto">
           {quantity === 0 ? (
             <button 
               onClick={onAdd}
-              className="w-full bg-white text-black font-extrabold py-4 rounded-2xl hover:bg-red-600 hover:text-white transition-all uppercase italic tracking-widest text-xs"
+              className="w-full bg-[#111111] text-white border border-white/10 font-black py-4 rounded-2xl hover:bg-red-600 hover:border-red-600 transition-all uppercase italic tracking-widest text-[10px]"
             >
               Agregar al pedido
             </button>
           ) : (
-            <div className="flex items-center justify-between w-full bg-red-600 rounded-2xl overflow-hidden shadow-lg shadow-red-900/40">
+            <div className="flex items-center justify-between w-full bg-red-600 rounded-2xl overflow-hidden shadow-[0_10px_20px_rgba(220,38,38,0.3)]">
               <button onClick={onRemove} className="px-6 py-4 text-white hover:bg-black/20 font-black text-2xl transition-colors">-</button>
-              <span className="text-white font-black text-xl">{quantity}</span>
+              <span className="text-white font-black text-xl tabular-nums">{quantity}</span>
               <button onClick={onAdd} className="px-6 py-4 text-white hover:bg-black/20 font-black text-2xl transition-colors">+</button>
             </div>
           )}
