@@ -12,8 +12,8 @@ const Hero: React.FC = () => {
     <div className="relative h-screen w-full overflow-hidden bg-transparent">
       <BackgroundVideo />
       
-      {/* BLOQUE SUPERIOR: Títulos arriba */}
-      <div className="absolute top-[5%] md:top-[8%] left-0 w-full z-20 px-4 text-center">
+      {/* TÍTULOS: Posicionados arriba para dejar el centro libre */}
+      <div className="absolute top-[8%] left-0 w-full z-20 px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,14 +22,14 @@ const Hero: React.FC = () => {
           <span className="block text-red-600 font-bold tracking-[0.3em] text-[10px] md:text-xs uppercase mb-1">
             Dark Kitchen & Delivery
           </span>
-          <h2 className="text-4xl md:text-6xl font-black text-white italic tracking-tighter uppercase leading-none drop-shadow-2xl">
+          <h2 className="text-4xl md:text-6xl font-black text-white italic tracking-tighter uppercase leading-none">
             SABOR <span className="text-gray-400">BRUTAL</span>
           </h2>
         </motion.div>
       </div>
 
-      {/* BLOQUE INFERIOR: Botones e iconos abajo */}
-      <div className="absolute bottom-[8%] md:bottom-[10%] left-0 w-full z-20 px-4 text-center">
+      {/* BOTONES E ICONOS: Posicionados abajo */}
+      <div className="absolute bottom-[10%] left-0 w-full z-20 px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,16 +49,16 @@ const Hero: React.FC = () => {
 
           <div className="grid grid-cols-3 gap-2 w-full max-w-xs md:max-w-md mx-auto border-t border-white/10 pt-6">
             <div className="flex flex-col items-center gap-1">
-              <Clock className="w-4 h-4 text-red-500" />
-              <span className="text-white/60 text-[9px] md:text-[10px] uppercase font-bold">30-45 Min</span>
+              <Clock className="w-5 h-5 text-red-500" />
+              <span className="text-white/60 text-[10px] uppercase font-bold tracking-widest">30-45 Min</span>
             </div>
-            <div className="flex flex-col items-center border-x border-white/10 gap-1">
-              <Bike className="w-4 h-4 text-red-500" />
-              <span className="text-white/60 text-[9px] md:text-[10px] uppercase font-bold">Delivery</span>
+            <div className="flex flex-col items-center gap-1 border-x border-white/10">
+              <Bike className="w-5 h-5 text-red-500" />
+              <span className="text-white/60 text-[10px] uppercase font-bold tracking-widest">Delivery</span>
             </div>
             <div className="flex flex-col items-center gap-1">
-              <Flame className="w-4 h-4 text-red-500" />
-              <span className="text-white/60 text-[9px] md:text-[10px] uppercase font-bold">Caliente</span>
+              <Flame className="w-5 h-5 text-red-500" />
+              <span className="text-white/60 text-[10px] uppercase font-bold tracking-widest">Caliente</span>
             </div>
           </div>
         </motion.div>
