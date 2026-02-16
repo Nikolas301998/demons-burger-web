@@ -14,18 +14,15 @@
         color: #ffffff;
         margin: 0;
         min-height: 100vh;
-        /* --- ESTO ES LO QUE CARGA TU IMAGEN DE FONDO --- */
-        /* Quitamos la barra inicial / para que la ruta sea relativa. 
-           Si tu carpeta es 'public/images/...', en la web final es 'images/...' */
-        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/products/bg-burger.jpg');
+        /* Referencia directa a la carpeta public usando / al inicio */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/products/bg-burger.jpeg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
       }
 
-      /* Forzamos que el contenedor de React y sus hijos directos sean transparentes 
-         para que no tapen el fondo del body */
+      /* Hacemos que React no tape el fondo del body */
       #root, #root > div {
         min-height: 100vh;
         background-color: transparent !important;
@@ -60,13 +57,11 @@
         background: #ff0000;
       }
 
-      /* Variables para los colores del botón */
       :root {
         --color-background: #0a0a0a; 
         --color-text: #ffffff;
       }
 
-      /* Definición de la propiedad para la animación */
       @property --r {
         syntax: '<angle>';
         initial-value: 0deg;
@@ -96,11 +91,6 @@
     </script>
     <link rel="stylesheet" href="/index.css">
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
-</html>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
