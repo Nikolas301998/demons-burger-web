@@ -3,10 +3,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
-import { ValentineModal } from './components/ValentineModal';
 import { FloatingCart } from './components/FloatingCart';
 
 function App() {
+  // Aquí se guarda el pedido: { "id": cantidad }
   const [cart, setCart] = useState<{ [key: string]: number }>({});
 
   const addToCart = (id: string) => {
@@ -24,11 +24,11 @@ function App() {
 
   return (
     <div className="bg-transparent min-h-screen">
-      <ValentineModal /> 
       <Navbar />
       <Hero />
       <Menu cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} />
       <Footer /> 
+      {/* El botón flotante que resume todo el pedido */}
       <FloatingCart cart={cart} />
     </div>
   );
