@@ -13,18 +13,20 @@ const Hero: React.FC = () => {
     <div className="relative h-screen w-full overflow-hidden flex items-end justify-center pb-12 md:pb-20">
       <BackgroundVideo />
       
-      {/* TEXTO SUPERIOR (Solo móvil) */}
-      <div className="absolute top-[5%] left-0 w-full flex flex-col items-center justify-center z-10 md:hidden">
+      {/* TEXTO SUPERIOR (Ahora visible en TODOS los dispositivos) */}
+      {/* Se eliminó 'md:hidden' para que se vea en PC/Tablet también */}
+      <div className="absolute top-[5%] left-0 w-full flex flex-col items-center justify-center z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center"
         >
-          <span className="block text-red-600 font-bold tracking-[0.3em] text-xs uppercase mb-1 drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">
+          {/* Ajusté ligeramente el tamaño de texto para PC (md:text-sm y md:text-5xl) */}
+          <span className="block text-red-600 font-bold tracking-[0.3em] text-xs md:text-sm uppercase mb-1 drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">
             Dark Kitchen & Delivery
           </span>
-          <h2 className="text-4xl font-black text-white italic tracking-tighter uppercase leading-none drop-shadow-xl">
+          <h2 className="text-4xl md:text-5xl font-black text-white italic tracking-tighter uppercase leading-none drop-shadow-xl">
             SABOR <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">
               BRUTAL
@@ -34,7 +36,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* CONTENIDO PRINCIPAL */}
+      {/* CONTENIDO PRINCIPAL (Botones) */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,7 +46,7 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full max-w-lg mx-auto mb-10">
             
-            {/* Botón 1: PEDIR AHORA (Rojo) */}
+            {/* Botón 1 */}
             <GradientButton 
               onClick={handleWhatsapp}
               width="240px"
@@ -54,7 +56,7 @@ const Hero: React.FC = () => {
               PEDIR AHORA
             </GradientButton>
 
-            {/* Botón 2: DANOS TU OPINIÓN (Naranja) */}
+            {/* Botón 2 */}
             <GradientButton
               onClick={() => window.open(REVIEW_LINK, '_blank')}
               width="240px"
