@@ -6,16 +6,13 @@ const BackgroundVideo: React.FC = () => {
       <img
         src="/images/products/bg-burger.jpeg"
         alt="Fondo Demons Burger"
-        /*
-           Volvemos a object-cover para que llene la pantalla.
-           Usamos object-center para intentar centrar el nombre.
-           Mantenemos el brillo y contraste que te gustó.
+        /* scale-125 en móvil lo hace ver más grande. 
+           md:scale-110 en PC para que también resalte.
         */
-        className="w-full h-full object-cover object-center brightness-110 contrast-125 opacity-90 transition-all duration-700"
+        className="w-full h-full object-cover object-center brightness-110 contrast-125 opacity-90 scale-125 md:scale-110 transition-transform duration-700"
       />
       
-      {/* Sombra sutil */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/80" />
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/50 via-transparent to-black/90" />
     </div>
   );
 };
