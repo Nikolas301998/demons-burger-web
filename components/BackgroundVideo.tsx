@@ -6,9 +6,12 @@ const BackgroundVideo: React.FC = () => {
       <img
         src="/images/products/bg-burger.jpeg"
         alt="Fondo Demons Burger"
-        className="w-full h-full object-cover object-center opacity-60 md:opacity-100 transition-opacity duration-700"
+        /* brightness-110 y contrast-125 hacen que la imagen "explote" visualmente */
+        className="w-full h-full object-cover object-center opacity-90 brightness-110 contrast-125 transition-all duration-700"
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/70 via-transparent to-black/90" />
+      
+      {/* Capa de sombra suavizada para que no apague la imagen */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/40 via-transparent to-black/80" />
     </div>
   );
 };
