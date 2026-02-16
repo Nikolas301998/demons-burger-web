@@ -23,7 +23,6 @@ function App() {
   };
 
   return (
-    /* bg-transparent permite ver el fondo del body */
     <div className="bg-transparent min-h-screen">
       <ValentineModal /> 
       <Navbar />
