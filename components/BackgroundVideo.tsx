@@ -9,7 +9,7 @@ const BackgroundVideo: React.FC = () => {
         /* scale-125 en móvil lo hace ver más grande. 
            md:scale-110 en PC para que también resalte.
         */
-        className="w-full h-full object-cover object-center brightness-110 contrast-125 opacity-90 scale-125 md:scale-110 transition-transform duration-700"
+        className="w-full h-full object-cover object-center brightness-110 contrast-125 opacity-90 scale-110 md:scale-110 transition-transform duration-700"
       />
       
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/50 via-transparent to-black/90" />
@@ -18,5 +18,6 @@ const BackgroundVideo: React.FC = () => {
 };
 
 export default BackgroundVideo;
+
 
 
