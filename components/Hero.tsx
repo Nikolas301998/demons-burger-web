@@ -1,10 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// 👇 Agregamos MessageSquarePlus aquí
 import { MessageCircle, Clock, Flame, Bike, MessageSquarePlus } from 'lucide-react';
 import BackgroundVideo from './BackgroundVideo';
 import GradientButton from './GradientButton';
-// 👇 Agregamos REVIEW_LINK aquí
 import { WHATSAPP_LINK, REVIEW_LINK } from '../constants';
 
 const Hero: React.FC = () => {
@@ -12,7 +10,9 @@ const Hero: React.FC = () => {
   const handleWhatsapp = () => window.open(WHATSAPP_LINK, '_blank');
 
   return (
-    <div className="relative h-screen w-full overflow-hidden flex items-end justify-center pb-12 md:pb-20">
+    /* bg-transparent para asegurar que no tape el fondo del body */
+    <div className="relative h-screen w-full overflow-hidden flex items-end justify-center pb-12 md:pb-20 bg-transparent">
+      {/* El error visual está dentro de este componente 👇 */}
       <BackgroundVideo />
       
       {/* TEXTO SUPERIOR (Solo móvil) */}
